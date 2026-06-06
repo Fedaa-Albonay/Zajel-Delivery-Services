@@ -1,12 +1,3 @@
-const express = require('express');
-const path = require('path');
-
-const app = express();
-const PORT = process.env.PORT || 3000;
-
-app.use(express.static(__dirname));
-app.use(express.json());
-
 const shipments = {
   'ZAJ-12345678': {
     status: 'Out for delivery',
@@ -24,21 +15,13 @@ const shipments = {
   }
 };
 
-app.get('/api/shipments/:trackingNumber', (req, res) => {
-  const trackingNumber = req.params.trackingNumber.toUpperCase();
+module.exports = (req, res) => {
+  const trackingNumber = String(req.query.trackingNumber || '').toUpperCase();
   const shipment = shipments[trackingNumber];
 
   if (!shipment) {
     return res.status(404).json({ message: 'Shipment not found' });
   }
 
-  return res.json({ trackingNumber, ...shipment });
-});
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-app.listen(PORT, () => {
-  console.log(`ZAJEL project running on http://localhost:${PORT}`);
-});
+  return res.status(200).json({ trackingNumber, ...shipment });
+};
