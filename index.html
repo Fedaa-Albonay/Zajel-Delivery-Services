@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ZAJEL is a modern UAE delivery and logistics platform offering fast parcel delivery, live tracking, smart quotes, and reliable business logistics." />
+  <meta name="keywords" content="ZAJEL, UAE delivery, Abu Dhabi logistics, shipment tracking, courier service, same day delivery" />
+  <meta name="author" content="ZAJEL Delivery Services" />
+  <meta property="og:title" content="ZAJEL Delivery Services" />
+  <meta property="og:description" content="Fast, secure and technology-powered delivery across all seven Emirates." />
+  <meta property="og:image" content="img/hero-van.jpeg" />
+  <meta name="theme-color" content="#25245f" />
+  <title>ZAJEL | Smart Delivery Across the UAE</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#home" aria-label="ZAJEL home"><span>ZAJEL</span><i></i></a>
+    <button class="menu-toggle" aria-label="Open navigation"><i class="fa-solid fa-bars"></i></button>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#tracking">Tracking</a>
+      <a href="#coverage">Coverage</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#vehicles">Vehicles</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+      <a class="ghost-btn" href="registration.html">Login</a>
+      <a class="primary-btn small" href="#quote">Get Quote</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content reveal">
+        <p class="eyebrow"><i class="fa-solid fa-location-dot"></i> UAE-wide smart logistics</p>
+        <h1>Fast, reliable and trackable delivery across the UAE.</h1>
+        <p class="hero-text">ZAJEL connects customers, businesses and drivers through a professional delivery experience built for speed, safety and transparency.</p>
+        <div class="hero-actions">
+          <a href="#tracking" class="primary-btn">Track Shipment</a>
+          <a href="#quote" class="secondary-btn">Calculate Price</a>
+          <a href="registration.html" class="text-link">Join ZAJEL <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="stats-grid">
+          <article><strong data-count="5000">0</strong><span>Monthly deliveries</span></article>
+          <article><strong data-count="98">0</strong><span>Success rate %</span></article>
+          <article><strong data-count="24">0</strong><span>Support hours</span></article>
+          <article><strong data-count="7">0</strong><span>Emirates covered</span></article>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <img src="img/hero-van.jpeg" alt="ZAJEL delivery van driving in the UAE" />
+        <div class="floating-card top-card"><i class="fa-solid fa-shield-halved"></i><span>Insured handling</span></div>
+        <div class="floating-card bottom-card"><i class="fa-solid fa-route"></i><span>Live route updates</span></div>
+      </div>
+    </section>
+
+    <section class="trusted-strip">
+      <span>Trusted by growing UAE businesses</span>
+      <b>NOON</b><b>ADNOC</b><b>ETISALAT</b><b>CAREEM</b><b>TALABAT</b>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-heading reveal">
+        <p class="eyebrow">What we offer</p>
+        <h2>Delivery services designed for modern businesses</h2>
+        <p>Choose the right service for documents, parcels, fragile items and large shipments.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card reveal"><img src="img/motorcycle.jpeg" alt="ZAJEL motorcycle courier" /><h3>Same Day Delivery</h3><p>Fast city delivery for urgent documents and small parcels.</p></article>
+        <article class="service-card reveal"><img src="img/handling.jpeg" alt="Careful package handling" /><h3>Secure Handling</h3><p>Professional packaging, careful handover and safer delivery flow.</p></article>
+        <article class="service-card reveal"><img src="img/tracking-mobile.jpeg" alt="Mobile tracking interface" /><h3>Real-Time Tracking</h3><p>Live shipment status from pickup to final delivery.</p></article>
+        <article class="service-card reveal"><img src="img/uae-map.jpeg" alt="UAE delivery coverage map" /><h3>Nationwide Coverage</h3><p>Connected routes across Abu Dhabi, Dubai, Sharjah and all Emirates.</p></article>
+      </div>
+    </section>
+
+    <section class="split-section" id="tracking">
+      <div class="split-media reveal"><img src="img/tracking-mobile.jpeg" alt="Customer tracking shipment by mobile" /></div>
+      <div class="split-content reveal">
+        <p class="eyebrow">Live shipment tracking</p>
+        <h2>Track your shipment instantly</h2>
+        <p>Try the demo tracking number <strong>ZAJ-12345678</strong> to preview the professional shipment timeline.</p>
+        <form class="tracking-form" id="trackingForm">
+          <label for="trackingInput">Tracking number</label>
+          <div class="input-action"><input id="trackingInput" type="search" placeholder="ZAJ-12345678" required /><button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button></div>
+        </form>
+        <div class="tracking-result" id="trackingResult" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section coverage" id="coverage">
+      <div class="section-heading reveal"><p class="eyebrow">UAE coverage</p><h2>One network. Seven Emirates.</h2><p>Explore delivery estimates by Emirate.</p></div>
+      <div class="coverage-layout">
+        <img class="map-img reveal" src="img/uae-map.jpeg" alt="ZAJEL UAE coverage map" />
+        <div class="emirates-list reveal" id="emiratesList"></div>
+      </div>
+    </section>
+
+    <section class="section quote-section" id="quote">
+      <div class="section-heading reveal"><p class="eyebrow">Smart estimator</p><h2>Get an instant delivery quote</h2><p>Estimate the price and recommended vehicle before booking.</p></div>
+      <form class="quote-card reveal" id="quoteForm">
+        <div class="form-row"><label>Pickup Emirate<select id="pickup"><option>Abu Dhabi</option><option>Dubai</option><option>Sharjah</option><option>Ajman</option><option>Fujairah</option><option>Ras Al Khaimah</option><option>Umm Al Quwain</option></select></label><label>Destination<select id="destination"><option>Dubai</option><option>Abu Dhabi</option><option>Sharjah</option><option>Ajman</option><option>Fujairah</option><option>Ras Al Khaimah</option><option>Umm Al Quwain</option></select></label></div>
+        <div class="form-row"><label>Weight (kg)<input id="weight" type="number" min="1" value="3" required /></label><label>Service Type<select id="serviceType"><option value="standard">Standard</option><option value="same-day">Same Day</option><option value="express">Express</option></select></label></div>
+        <button class="primary-btn" type="submit">Calculate Quote</button>
+        <div class="quote-result" id="quoteResult"></div>
+      </form>
+    </section>
+
+    <section class="section" id="vehicles">
+      <div class="section-heading reveal"><p class="eyebrow">Fleet</p><h2>Vehicles for every shipment size</h2></div>
+      <div class="vehicle-grid">
+        <article class="vehicle-card reveal"><img src="img/motorcycle.jpeg" alt="ZAJEL motorcycle" /><h3>Motorcycle</h3><p>Best for small parcels and documents.</p><span>Up to 10 kg</span></article>
+        <article class="vehicle-card reveal"><img src="img/red-van.jpeg" alt="ZAJEL van" /><h3>Van</h3><p>Ideal for retail and e-commerce orders.</p><span>Up to 500 kg</span></article>
+        <article class="vehicle-card reveal"><img src="img/truck.jpeg" alt="ZAJEL truck" /><h3>Truck</h3><p>Reliable option for large and business shipments.</p><span>Up to 2 tons</span></article>
+      </div>
+    </section>
+
+    <section class="split-section about" id="about">
+      <div class="split-content reveal"><p class="eyebrow">About ZAJEL</p><h2>Technology-powered logistics with a human touch.</h2><p>ZAJEL was designed to combine local UAE delivery expertise with modern digital tools including tracking, route visibility, smart quotes and customer support.</p><a class="secondary-btn" href="dashboard.html">Preview Dashboard</a></div>
+      <div class="split-media reveal"><img src="img/team.jpeg" alt="ZAJEL delivery team" /></div>
+    </section>
+
+    <section class="section testimonials">
+      <div class="section-heading reveal"><p class="eyebrow">Customer feedback</p><h2>What customers say</h2></div>
+      <div class="testimonial-grid">
+        <article class="testimonial-card reveal"><div>★★★★★</div><p>“The shipment tracking was clear and the driver arrived on time.”</p><strong>Ahmed — Abu Dhabi</strong></article>
+        <article class="testimonial-card reveal"><div>★★★★★</div><p>“Professional handling for our store deliveries across Dubai.”</p><strong>Maryam — Dubai</strong></article>
+        <article class="testimonial-card reveal"><div>★★★★★</div><p>“A polished logistics experience from booking to delivery.”</p><strong>Khaled — Sharjah</strong></article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="section-heading reveal"><p class="eyebrow">Contact</p><h2>Ready to move your shipment?</h2><p>Send a message and the ZAJEL team will contact you.</p></div>
+      <form class="contact-form reveal" id="contactForm">
+        <label>Name<input id="name" type="text" required /></label>
+        <label>Email<input id="email" type="email" required /></label>
+        <label>Phone<input id="phone" type="tel" required /></label>
+        <label>Message<textarea id="message" rows="5" required></textarea></label>
+        <button class="primary-btn" type="submit">Send Message</button>
+        <div id="contactResult"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div><a class="brand" href="#top"><span>ZAJEL</span><i></i></a><p>Smart delivery platform across the UAE.</p></div>
+    <div><h3>Quick Links</h3><a href="#services">Services</a><a href="#tracking">Tracking</a><a href="#quote">Quote</a></div>
+    <div><h3>Dashboards</h3><a href="dashboard.html">Customer Dashboard</a><a href="admin.html">Admin Dashboard</a><a href="registration.html">Login / Sign Up</a></div>
+    <div><h3>Follow</h3><div class="social-row"><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-linkedin"></i></a></div></div>
+    <p class="copyright">© 2026 ZAJEL Delivery Services. Built as a professional full-stack portfolio project.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
